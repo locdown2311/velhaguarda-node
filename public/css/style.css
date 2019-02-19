@@ -1,0 +1,9 @@
+.bg-logo{
+    background-color: #ffffff;
+}
+nav > ul > li > a {
+    text-decoration: none;
+}
+.borda-laranja{
+    border: 2px solid #f94f11;
+}

@@ -1,0 +1,44 @@
+@layout('master')
+@section('title')
+  Velha Guarda - Inicio
+@endsection
+@section('content')
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-4">
+        <div class="card">
+            <div class="card-header text-center">
+              Dados do Clan
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item text-uppercase text-center"><strong>{{dados.name}}</strong> </li>
+                  <li class="list-group-item text-uppercase text-center"><img src="https://royaleapi.com/static/img/ui/trophy.png" style="width: 30px; display: inline;"> Troféus necessários : {{dados.requiredScore}} </li>
+                  <li class="list-group-item text-uppercase text-center"><img src="https://royaleapi.com/static/img/ui/64x64/trophy.png" style="width: 30px; display: inline;"> Troféus :  {{dados.score}}</li>
+                  <li class="list-group-item text-uppercase text-center">Número de membros : <span class="badge badge-success">{{dados.memberCount}}</span> </li>
+                  <li class="list-group-item text-uppercase text-center"><a target="_blank" href="https://chat.whatsapp.com/ASFHe8yvGiv2w1K2nDNJii" role="button" class="btn btn-outline-success">Grupo Whatsapp</a></li>
+                  
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 col-sm-8">
+        <div class="card text-center">
+            <div class="card-header">
+              Notícias
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Usuario Aura peidou fora</h5>
+              <p class="card-text">É um cagão sem exceção.</p>
+            </div>
+            <div class="card-footer text-muted">
+              Agora
+            </div>
+        </div>
+    </div>
+    
+  </div>
+</div>
+@endsection
+
+

@@ -1,0 +1,47 @@
+@layout('master')
+@section('title')
+  Velha Guarda - Membros
+@endsection
+@section('content')
+<div class="container">
+  <div class="row">
+      <div class="col-md-12">
+            <div class="card text-center">
+                    <div class="card-header">
+                      Membros
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                                @each(item in dados)
+                                <div class="col-md-3 mt-2 mb-2">
+                                    <div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                            <h5 class="card-title text-center">{{item.name}}</h5> 
+                                                <hr> 
+                                            <p class="text-center">Poder: {{item.role}}}</p>
+                                                 <hr> 
+                                            <p class="text-center">Nível Atual: <span class="badge badge-danger">{{item.level}}</span></p>
+                                                 <hr> 
+                                            <p class="text-center"><img src="https://royaleapi.com/static/img/ui/trophy.png" style="width: 30px; display: inline;">{{item.trophies}}</p> 
+                                                <hr> 
+                                            <p class="text-center">Arena atual : <span class="badge badge-info">{{item.rank}}</span></p>
+                                            </div> 
+                                            <div class="card-footer text-center">
+                                            <a href="/info/{{item.tag}}" class="btn btn-outline-info">Visualizar perfil</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endeach
+                        </div>
+                            
+                    </div>
+            </div>
+      </div>
+        
+  </div>
+</div>
+@endsection
+
+
