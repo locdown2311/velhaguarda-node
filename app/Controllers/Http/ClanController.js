@@ -18,7 +18,7 @@ class ClanController {
         var data = await client.getPlayer(`${params.tag}`)
         var string = JSON.stringify(data)
         var convertido = JSON.parse(string)
-        return `ID digitado ${params.tag}`
+        return view.render('membro',{dados : convertido})
     }
 }
 
